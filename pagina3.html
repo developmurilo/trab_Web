@@ -4,146 +4,134 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-    <title>Document</title>
-	<style>
-		body{background-color: rgb(200, 200, 200);
-		}
-		.margin{margin:5%;}
-		
-		button{background-color: rgb(170, 170, 170);
-        color: rgb(0, 0, 0);
-        padding:0.5%;
-        box-shadow: 0px 10px 8px 0px rgba(0,0,0,0.5);
-        border-radius: 10px; 
-	    position: relative;
-		top: 23px;   
-	}
-
-        button:hover{box-shadow:none}
-
-		#B{background-color: rgb(170, 170, 170);
-        color: rgb(0, 0, 0);
-        padding:0.5%;
-        box-shadow: 0px 10px 8px 0px rgba(0,0,0,0.5);
-        border-radius: 10px; }
-
-        #B:hover{box-shadow:none}
-
-        footer{ background-color:lightgrey ;
-         height: 100%;
-		 padding: 1%;
-         
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <title>Formulário de Contato</title>
+    <style>
+        body {
+            background-color: rgb(200, 200, 200);
+            font-family: Arial, sans-serif;
         }
-      
-        
-        .tlfoot{
-         text-align: center;
+        .container {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+            margin: 3rem auto;
+            max-width: 700px;
         }
-
-        .script{font-size:11px;
-               margin: 5%;
-			   line-height: 3px;
-
-      }
-	</style>
+        .btn-custom {
+            background-color: rgb(170, 170, 170);
+            color: black;
+            border: none;
+            border-radius: 5px;
+            padding: 0.5rem 1rem;
+            box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.3);
+        }
+        .btn-custom:hover {
+            box-shadow: none;
+            background-color: rgb(150, 150, 150);
+        }
+        footer {
+            background-color: #f8f9fa;
+            padding: 1rem;
+            text-align: center;
+            margin-top: 2rem;
+            font-size: 0.9em;
+            box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .checkbox-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 1rem;
+        }
+        .checkbox-group label {
+            margin-left: 5px;
+        }
+    </style>
 </head>
 <body>
-	<div class="margin">
-	<h1>Formulário de Contato</h1>
-	<form action="" method="post">
-        <table>
-			<td>
-				<label for="nome">Nome:</label>
-			</td>
-			<td>
-				<input type="text" id="nome" name="nome" required>
-			</td>
-		</tr>
-		<tr>
-			<td>
-				<label for="email">E-mail:</label>
-			</td>
-			<td>
-				<input type="email" id="email" name="email" required>
-			</td>
-		</tr>
-		<tr>
-			<td>
-				<label for="telefone">Telefone:</label>
-			</td>
-			<td>
-				<input type="tel" id="telefone" name="telefone" placeholder="123-456-7890">
-			</td>
-		</tr>
+    <div class="container">
+        <h1 class="text-center mb-4">Formulário de Contato</h1>
+        <form action="" method="post">
+            <div class="mb-3">
+                <label for="nome" class="form-label">Nome:</label>
+                <input type="text" id="nome" name="nome" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">E-mail:</label>
+                <input type="email" id="email" name="email" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label for="telefone" class="form-label">Telefone:</label>
+                <input type="tel" id="telefone" name="telefone" class="form-control" placeholder="123-456-7890">
+            </div>
+            <div class="mb-3">
+                <p class="form-label">Mostre suas áreas de interesse:</p>
+                <div class="checkbox-group">
+                    <div>
+                        <input type="checkbox" id="opcao1" name="opcao1" value="1">
+                        <label for="opcao1">IA</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="opcao2" name="opcao2" value="2">
+                        <label for="opcao2">Cloud Computing</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="opcao3" name="opcao3" value="3">
+                        <label for="opcao3">Programação</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="opcao5" name="opcao5" value="5">
+                        <label for="opcao5">Hardware</label>
+                    </div>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="assunto" class="form-label">Assunto:</label>
+                <select id="assunto" name="assunto" class="form-select">
+                    <option value="suporte">Cursos</option>
+                    <option value="vendas">Vagas</option>
+                    <option value="outros">Outros</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="mensagem" class="form-label">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" rows="5" class="form-control"></textarea>
+            </div>
+            <div class="text-center">
+                <input type="submit" value="Enviar" class="btn btn-success">
+                <input type="reset" value="Deletar" class="btn btn-danger">
+            </div>
+        </form>
+        <div class="text-center mt-4">
+            <a href="index.html" class="btn btn-custom">Voltar à Tela Inicial</a>
+        </div>
+    </div>
+    <footer>
+        <h5>Conecte-se ao Mundo da Tecnologia</h5>
+        <p>
+            Clique em <a href="pagina3.html" class="btn-custom">Saiba Mais</a> e fique por dentro de cursos, vagas de emprego e muito mais.
+        </p>
+        <div>
+            <script>
+                var nomeCompleto = "Murilo de Oliveira Silva";
+                var anoCorrente = new Date().getFullYear();
+                var facebook = "Murilo Silva";
+                var instagram = "oliver_muu";
+                var sexo = "Masculino";
+                var localizacao = "Campinas, SP, Brasil";
 
-        <td>Mostre suas areas de interesse:</td>
-        </table>
-        <input type="checkbox" id="opcao1" name="opcao1" value="1">
-        <label for="opcao1">IA</label>
-      
-        <input type="checkbox" id="opcao2" name="opcao2" value="2">
-        <label for="opcao2">Cloud Computing</label>
-      
-        <input type="checkbox" id="opcao3" name="opcao3" value="3">
-        <label for="opcao3">Programação</label>
-        <input type="checkbox" id="opcao5" name="opcao5" value="5">
-        <label for="opcao3">Hardware</label>
-     <table>   
-		<tr>
-			<td>
-				<label for="assunto">Assunto:</label>
-			</td>
-			<td>
-				<select id="assunto" name="assunto">
-					<option value="suporte">Cursos</option>
-					<option value="vendas">Vagas</option>
-					<option value="outros">Outros</option>
-				</select>
-			</td>
-		</tr>
-		<tr>
-			<td>
-				<label for="mensagem">Mensagem:</label>
-			</td>
-			<td>
-				<textarea id="mensagem" name="mensagem" rows="5"></textarea>
-			</td>
-		</tr>
-      
-	</table>
-	<input type="submit" value="Enviar">
-    <input type="reset" value="Deletar">
-</form>
-<a href="index.html"><button>Voltar a tela inicial</button></a>
-</div>
-<footer>
- 
-
-  
-	<h5 class="tlfoot"> CONECTE-SE AO MUNDO DA TECNOLOGIA</h5>
-	<hr>
-				   
-   <p style="text-align: center;">Clique em Saiba Mais e fique por dentro de Cursos, Vagas de emprego e muito mais     
-	<a id="B" href="pagina3.html">SAIBA MAIS</a></p> 
-  
-  <div class="script">
-  <script>
-  var nomeCompleto = "Murilo de Oliveira Silva";
-  var anoCorrente = new Date().getFullYear();
-  var facebook = "Murilo Silva";
-  var instagram = "oliver_muu";
-  var sexo = "Masculino";
-  var localizacao = "Campinas,SP Brasil";
-  
-  document.write("<p>" + nomeCompleto + "</p>");
-  document.write("<p>" + anoCorrente + "</p>");
-  document.write("<p><strong>Facebook:</strong> " + facebook + "</p>");
-  document.write("<p><strong>Instagram:</strong> " + instagram + "</p>");
-  document.write("<p><strong>Sexo:</strong> " + sexo + "</p>");
-  document.write("<p><strong>Pólo:</strong>" + localizacao + "</p>");
-  </script>
-  </div>
-  </footer>
+                document.write(`
+                    <p>${nomeCompleto}</p>
+                    <p>${anoCorrente}</p>
+                    <p><strong>Facebook:</strong> ${facebook}</p>
+                    <p><strong>Instagram:</strong> @${instagram}</p>
+                    <p><strong>Sexo:</strong> ${sexo}</p>
+                    <p><strong>Localização:</strong> ${localizacao}</p>
+                `);
+            </script>
+        </div>
+    </footer>
 </body>
 </html>
